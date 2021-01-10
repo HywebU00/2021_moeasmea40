@@ -3,11 +3,11 @@
 
 //-------------------------------------------------------------顏色---------//
 // 定義顏色 此顏色可自由變換
-$primaryColor: #21baff; //主色
-$secondaryColor: #781f79; //輔色
-$lightColor: #fcc211; //點綴
-$linkColor: #21baff; //連結
-$importantColor: #ff3e4d; //重要
+$primaryColor: #392d71; //主色
+$secondaryColor: #9f6d0e; //輔色
+$lightColor: #8000aa; //點綴
+$linkColor: #392d71; //連結
+$importantColor: #c7005b; //重要
 // 但注意真實顏色與語意的關聯必須易於辨識
 $color-blue: #21baff;
 $color-green: #5cb85c;
@@ -21,12 +21,12 @@ $color-hr: #666; //hr顏色
 $color-word: #222; //一般字的顏色
 $btn-word: #222; //按鈕字的顏色
 // 連結顏色
-$aColor: #21baff;
+$aColor: #c7005b;
 $aHover: lighten($aColor, 10);
 
 // 表單focus顏色
-$form-focus: #21baff; //表單
-$form-btn: #21baff; //表單
+$form-focus: #392d71; //表單
+$form-btn: #392d71; //表單
 //-------------------------------------------------------------字型--------//
 
 // 字型設定
@@ -40,17 +40,17 @@ $font-size: 1em;
 // 格線系統
 $grid-columns: 12 !default;                //格線欄位數
 $grid-gutter-width: 30px !default;         //左右padding
-$container-max: 1200px !default;           //container最大寬
+$container-max: 1000px !default;           //container最大寬
 
 //mediaquery
 $screen-lg: 1400px !default; //電腦
-$screen-md: 992px !default; //平板
+$screen-md: 1100px !default; //平板
 $screen-sm: 768px !default; //手機
 $screen-xs: 576px !default; //極小尺寸
 
 //-------------------------------------------------------------客製化------//
-$fatfooter-length: 6; //fatfooter選單一行個數
-$fatfooterBgColor: #f1f1f1; //fatFooter 底色
+$fatfooter-length: 5; //fatfooter選單一行個數
+$fatfooterBgColor: #24083a; //fatFooter 底色
 
 //-------------------------------------------------------------客製化------//
 

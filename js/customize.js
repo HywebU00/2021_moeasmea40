@@ -97,7 +97,7 @@ $(function() {
         lazy: true
     });
     // 
-$('.cppic_slider').slick({
+    $('.cppic_slider').slick({
         dots: true,
         infinite: false,
         speed: 500,
@@ -138,11 +138,11 @@ $('.cppic_slider').slick({
     });
 
      // cp_photo
-    $('.Slider-for').on('init reInit afterChange', function(event, slick, currentSlide) {
+     $('.Slider-for').on('init reInit afterChange', function(event, slick, currentSlide) {
         var i = (currentSlide ? currentSlide : 0) + 1;
         $('.controls').html(i + '/' + slick.slideCount);
     });
-    $('.Slider-for').slick({
+     $('.Slider-for').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
@@ -153,7 +153,7 @@ $('.cppic_slider').slick({
         asNavFor: '.Slider-nav',
         infinite: true
     });
-    $('.Slider-nav').slick({
+     $('.Slider-nav').slick({
         slidesToShow: 2,
         slidesToScroll: 1,
         asNavFor: '.Slider-for',
@@ -163,5 +163,21 @@ $('.cppic_slider').slick({
         focusOnSelect: true,
         infinite: true
     });
-    
+
+ });
+
+
+$(window).on("load resize scroll", function(e) {
+    var window_H = $(window).innerHeight();
+    var windowTop = $(window).scrollTop();
+    $('.fflash').each(function(index, el) {
+          // 可以+130 讓圖進入多點再跑動畫
+          var imgTop = Math.floor($(this).offset().top - windowTop + 50);
+          //imgTop < window_H 是指進入到最底部
+          //imgTop>0 是指還沒滾到最上方
+          //同時條件成立 代表物件在看得到的地方才會trigger動畫
+          if (imgTop < window_H && imgTop > 0) {
+            $(this).addClass('effect');
+        }
+    });
 });

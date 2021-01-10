@@ -2,10 +2,23 @@
 // 文章標題
 h1.title, h2.title {
   line-height: 1.25em;
-  margin: .4em 0;
+  margin: .5em 0;
+  color: #24083a;
+  padding-bottom: 0.5em;
+  border-bottom: 2px solid #8000aa;
 }
 // .tt{ color: #222; }
 .cp {
+  h3,h4,h5,h6{
+    color: $linkColor;
+    margin-bottom: 0.5em;
+  }
+  .cp_photo{
+    overflow: hidden;
+  }
+  .cp_video{
+    margin-bottom: 1em;
+  }
   .pic {
     float: left;
     margin: 0px 1em 1em 0;
@@ -14,7 +27,7 @@ h1.title, h2.title {
     max-width: 400px;
     background: #F1F1F1;
     overflow: hidden;
-    padding: .5em .5em .2em;
+    padding: .5em;
     img {
       float: none;
       width: 100%;
