@@ -433,7 +433,7 @@
           }
           img{
             width: 100%;
-            height: auto;
+            height: 100%;
             z-index: 9;
           }
         }
@@ -556,13 +556,19 @@
   }
   .tabContent{
     padding: 20px 0;
+    min-height: 415px;
     ul{
-      display: flex;
-      flex-wrap:wrap;
-      justify-content: center;
+      // display: flex;
+      // flex-wrap:wrap;
+      // justify-content: center;
       position: relative;
+      min-height: 415px;
+      @include screen('tablet') {
+        min-height: 640px;
+      }
       @include screen('mobile') {
         display: block;
+        // min-height: auto;
       }
       &:before{
         content: "";
@@ -583,11 +589,12 @@
         }
       }
       li{
-        flex: 0 1 31%;
+        // flex: 0 1 31%;
+        width: 31%;
         height: 148px;
         border-bottom: 0;
         padding: 30px 1%;
-        position: relative;
+        position: absolute;
         box-sizing: content-box;
         margin: 0;
         @include screen('tablet') {
@@ -599,8 +606,8 @@
           height: 148px;
           box-sizing: border-box;
           margin-bottom: 1.5em;
+          position: relative;
         }
-
         &:before{
           content: "";
           width: 16px;
@@ -618,7 +625,16 @@
           }
         }
         &:nth-child(2){
-          order:4;
+          // align-self: flex-end;
+          left: 16.5%;
+          top: 208px;
+          @include screen('tablet') {
+            top: 320px;
+          }
+          @include screen('mobile') {
+            left: 0;
+            top: auto;
+          }
           &:before{
             border:5px solid #582d71;
             top: -13px;
@@ -628,12 +644,25 @@
           }
         }
         &:nth-child(3){
+          left: 33%;
+          @include screen('mobile') {
+            left: auto;
+          }
           &:before{
             border:5px solid #762079;
           }
         }
         &:nth-child(4){
-          order:5;
+          // align-self: flex-end;
+          left: 49.5%;
+          top: 208px;
+          @include screen('tablet') {
+            top: 320px;
+          }
+          @include screen('mobile') {
+            left: 0;
+            top: auto;
+          }
           &:before{
             border:5px solid #901282;
             top: -13px;
@@ -643,12 +672,17 @@
           }
         }
         &:nth-child(5){
+          left: 66%;
+          @include screen('mobile') {
+            left: auto;
+          }
           &:before{
             border:5px solid #ae008d;
           }
         }
         a{
           display: block;
+          position: relative;
           overflow: hidden;
           .pic{
             width: 148px;
